@@ -20,6 +20,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-angular": "8.2.0",
+    "@types/jasmine": "3.3.0",
     "typescript": "^3.8.3",
     "husky": "0.14.3",
     "jasmine-core": "3.3.0",
