@@ -1,29 +1,58 @@
 'use strict';
 
-const BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+import {Utils} from '../app.keys'
 
-  function int2char(n: number) {
-    return BI_RM.charAt(n);
+export class BitOperations {
+
+  public int2char(n: number) {
+    return Utils.BI_RM.charAt(n);
   }
-  //#region BIT_OPERATIONS
-  // (public) this & a
-  function op_and(x: number, y: number) {
+
+  /**
+   * @param {number} x
+   * @param {number} y
+   * @return {number}
+   */
+  public op_and(x: number, y: number): number {
     return x & y;
   }
-  // (public) this | a
-  function op_or(x: number, y: number) {
+
+  /**
+   * 
+   * @param {number} x
+   * @param {number} y
+   * @return {number}
+   */
+  public op_or(x: number, y: number): number {
     return x | y;
   }
-  // (public) this ^ a
-  function op_xor(x: number, y: number) {
+
+  /**
+   * 
+   * @param {number} x
+   * @param {number} y
+   * @return {number}
+   */
+  public op_xor(x: number, y: number): number {
     return x ^ y;
   }
-  // (public) this & ~a
-  function op_andnot(x: number, y: number) {
+
+  /**
+   * 
+   * @param  {number} x
+   * @param  {number} y
+   * @return {number}
+   */
+  public op_andnot(x: number, y: number): number {
     return x & ~y;
   }
-  // return index of lowest 1-bit in x, x < 2^31
-  function lbit(x: number) {
+
+  /**
+   * @description index of lowest 1-bit in x, x < 2^31
+   * @param {number} x
+   * @return {number}
+   */
+  public lbit(x: number): number {
     if (x == 0) {
       return -1;
     }
@@ -49,8 +78,13 @@ const BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
     }
     return r;
   }
-  // return number of 1 bits in x
-  function cbit(x: number) {
+
+  /**
+   * @description number of 1 bits in x
+   * @param {number} x
+   * @return {number}
+   */
+  public cbit(x: number): number {
     let r = 0;
     while (x != 0) {
       x &= x - 1;
@@ -58,3 +92,5 @@ const BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
     }
     return r;
   }
+
+}
