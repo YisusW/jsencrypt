@@ -1,6 +1,6 @@
 'use strict';
 
-import {Utils} from '../app.keys'
+import {Utils} from '../app.keys';
 
 export class BitOperations {
 
@@ -18,7 +18,7 @@ export class BitOperations {
   }
 
   /**
-   * 
+   *
    * @param {number} x
    * @param {number} y
    * @return {number}
@@ -28,7 +28,7 @@ export class BitOperations {
   }
 
   /**
-   * 
+   *
    * @param {number} x
    * @param {number} y
    * @return {number}
@@ -38,7 +38,7 @@ export class BitOperations {
   }
 
   /**
-   * 
+   *
    * @param  {number} x
    * @param  {number} y
    * @return {number}

@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "ng lint",
-    "lint:fix": "ng lint --fix",
+    "lint": "npm run prettier:check && tslint --project .",
+    "lint:fix": "tslint --fix --project .",
     "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "author": "@yisusW",
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "ng lint --fix",
+      "pre-commit": "npm run lint:fix",
       "pre-push": "npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
@@ -23,7 +23,7 @@
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-angular": "8.2.0",
     "@types/jasmine": "3.3.0",
-    "typescript": "^3.8.3",
+    "codelyzer": "4.5.0",
     "husky": "0.14.3",
     "jasmine-core": "3.3.0",
     "jasmine-spec-reporter": "4.2.1",
@@ -33,7 +33,9 @@
     "karma-coverage-istanbul-reporter": "2.0.0",
     "karma-jasmine": "2.0.1",
     "karma-jasmine-html-reporter": "1.4.0",
+    "prettier": "^1.19.1",
     "ts-node": "5.0.1",
-    "tslint": "5.11.0"
+    "tslint": "5.11.0",
+    "typescript": "^3.8.3"
   }
 }
