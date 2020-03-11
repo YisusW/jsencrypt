@@ -5,4 +5,3 @@ export namespace Utils {
   export const b64map = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
   export const b64pad = '=';
 }
-

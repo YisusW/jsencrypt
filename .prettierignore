@@ -1,0 +1,9 @@
+/coverage
+/build
+/test/ui/coverage
+/dist
+/images
+*.json
+CHANGELOG.md
+*.yml
+index.js

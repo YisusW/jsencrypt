@@ -3,7 +3,7 @@
 const extendStatics = (d, b) => {
     const extendStatics = Object.setPrototypeOf ||
       ({ __proto__: [] } instanceof Array && function(d, b) { d.__proto__ = b; }) ||
-      function(d, b) { for (let p in b) { if (b.hasOwnProperty(p)) { d[p] = b[p]; } } };
+      function(d, b) { for (const p in b) { if (b.hasOwnProperty(p)) { d[p] = b[p]; } } };
     return extendStatics(d, b);
   };
 

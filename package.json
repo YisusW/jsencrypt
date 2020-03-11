@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npm run prettier:check && tslint --project .",
+    "prettier": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
+    "lint": "tslint --project .",
     "lint:fix": "tslint --fix --project .",
+    "prettier:check": "npm run prettier -- -l",
+    "prettier:cli": "npm run prettier -- -c",
+    "prettier:fix": "npm run prettier:cli -- --write",
     "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "author": "@yisusW",
