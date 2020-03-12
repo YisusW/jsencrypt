@@ -17,7 +17,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write \"src/**/*.ts\"",
+      "pre-commit": "pretty-quick --staged",
       "pre-push": "npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
@@ -28,7 +28,7 @@
     "@commitlint/config-angular": "8.2.0",
     "@types/jasmine": "3.3.0",
     "codelyzer": "4.5.0",
-    "husky": "0.14.3",
+    "husky": "^4.2.3",
     "jasmine-core": "3.3.0",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "4.4.1",
