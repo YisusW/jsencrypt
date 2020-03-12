@@ -3,7 +3,6 @@
 import {Utils} from '../app.keys';
 
 export class BitOperations {
-
   public int2char(n: number) {
     return Utils.BI_RM.charAt(n);
   }
@@ -92,5 +91,4 @@ export class BitOperations {
     }
     return r;
   }
-
 }

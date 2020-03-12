@@ -4,7 +4,6 @@ import {Utils} from '../app.keys';
 import {BitOperations} from './bitOperations';
 
 export class Base64 {
-
   constructor(private bitOperations: BitOperations) {}
 
   public hex2b64(h) {
@@ -69,5 +68,4 @@ export class Base64 {
     }
     return ret;
   }
-
 }
