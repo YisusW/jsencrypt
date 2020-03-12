@@ -16,7 +16,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier:fix && npm run lint:fix &&",
+      "pre-commit": "npm run prettier:fix && npm run lint:fix",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
