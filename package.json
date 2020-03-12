@@ -10,15 +10,13 @@
     "lint:fix": "tslint --fix --project .",
     "prettier:check": "prettier --check \"src/**/*.ts\"",
     "prettier:fix": "prettier --write \"src/**/*.ts\"",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "author": "@yisusW",
   "license": "ISC",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
