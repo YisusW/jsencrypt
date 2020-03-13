@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --check \"src/**/*.ts\" ",
     "lint": "npm run prettier:check && tslint --project .",
-    "lint:fix": "tslint --fix --project .",
+    "lint:fix": "npm run prettier:fix && tslint --fix --project .",
     "prettier:check": "prettier --check \"src/**/*.ts\"",
     "prettier:fix": "prettier --write \"src/**/*.ts\"",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
@@ -25,7 +25,6 @@
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-angular": "8.2.0",
     "@types/jasmine": "3.3.0",
-    "codelyzer": "4.5.0",
     "husky": "^4.2.3",
     "jasmine-core": "3.3.0",
     "jasmine-spec-reporter": "4.2.1",
