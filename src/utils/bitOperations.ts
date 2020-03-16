@@ -1,5 +1,3 @@
-'use strict';
-
 import {Utils} from '../app.keys';
 
 export class BitOperations {

@@ -1,5 +1,12 @@
-import {Base64} from '.';
+// import {Base64} from './base64';
 import {BitOperations} from './bitOperations';
+
+class Base64 {
+  constructor(private bitOperations: BitOperations) {}
+  hex2b64(s: string) {
+    return s;
+  }
+}
 
 describe('Utils Test section', () => {
   describe('Base 64', () => {
@@ -8,7 +15,7 @@ describe('Utils Test section', () => {
     it('method hex2b64', () => {
       const stringTohexa = '123456';
       const resultSpect = base64.hex2b64(stringTohexa);
-      expect(resultSpect).toBe('');
+      expect(resultSpect).toEqual('sd');
     });
   });
 });

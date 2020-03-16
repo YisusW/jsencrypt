@@ -3,13 +3,20 @@
 
 module.exports = function(config) {
   config.set({
-    basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'karma-typescript'],
+    files: [
+      '**/*.spec.ts' // *.tsx for React Jsx
+    ],
+    preprocessors: {
+      '**/*.spec.ts': 'karma-typescript' // *.tsx for React Jsx
+    },
+    reporters: ['progress', 'karma-typescript'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter')
+      require('karma-coverage-istanbul-reporter'),
+      require('karma-typescript')
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
@@ -19,7 +26,6 @@ module.exports = function(config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
