@@ -6,7 +6,7 @@ import {BitOperations} from './bitOperations';
 export class Base64 {
   constructor(private bitOperations: BitOperations) {}
 
-  public hex2b64(h) {
+  public hex2b64(h: string) {
     let i: number;
     let c: number;
     let ret = '';
